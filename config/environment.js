@@ -2,6 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
+    proxyHost: 'http://mighty-lowlands-5553.herokuapp.com/',
     modulePrefix: 'weather-app',
     environment: environment,
     baseURL: '/',

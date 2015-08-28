@@ -9,7 +9,6 @@ export default Ember.Route.extend({
 
   beforeModel() {
     navigator.geolocation.getCurrentPosition((position) => {
-      debugger;
       this.transitionTo('weather', position.coords.latitude, position.coords.longitude);
     });
   }

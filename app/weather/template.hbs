@@ -1,9 +1,12 @@
+<div class="currentweather">
+<h2>Current Weather</h2>
+    {{model.currently.summary}}
+<h4>Hourly</h4>
+    {{model.hourly.summary}}
+</div>
 
-{{model.hourly.summary}}
-{{model.currently.summary}}
 {{model.currently.time}}
+{{sky-icon height="100" width="100" icon=model.currently.icon color="blue"}}
 
 {{model.currently.temperature}}
-
-{{model.hourly.data}}
 

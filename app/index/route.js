@@ -1,9 +1,19 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function(params) {
-    var lat = params.lat;
-    var lng = params.lng;
-    return Ember.$.ajax('http://mighty-lowlands-5553.herokuapp.com/' + lat + ',' + lng);
+  // model: function() {
+  //   var lat = 34.7478771;
+  //   var lng = -92.2652074;
+  //   return Ember.$.ajax('http://mighty-lowlands-5553.herokuapp.com/' + lat + ',' + lng);
+  // },
+
+  beforeModel() {
+    navigator.geolocation.getCurrentPosition((position) => {
+      debugger;
+      this.transitionTo('weather', position.coords.latitude, position.coords.longitude);
+    });
   }
+
 });
+
+

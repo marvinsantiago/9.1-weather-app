@@ -1,6 +1,13 @@
 @import "bourbon";
 @import "neat";
+@import url(https://fonts.googleapis.com/css?family=Oswald);
 
 body {
-    background: #f2c9c9;
+    background: #edeaea;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+nav {
+    display: inline-block;
+    background: #edeaea;
 }

@@ -1,12 +1,16 @@
 <div class="currentweather">
-<h2>Current Weather</h2>
-    {{model.currently.summary}}
-<h4>Hourly</h4>
-    {{model.hourly.summary}}
+<h2>RIGHT NOW</h2>
+ {{sky-icon height="60" width="80" icon=model.currently.icon color="black"}}
+    {{model.currently.temperature}}&#8457;
+    <p>{{model.currently.summary}} - Feels like {{model.currently.apparentTemperature}}&#8457;</p>
+<h4>NEXT HOUR</h4>
+   <p>{{model.minutely.summary}}</p>
+<h4>NEXT 24 HOURS</h4>
+<p>{{model.hourly.summary}}</p>
+<h4>NEXT 7 DAYS</h4>
+<p>{{model.daily.summary}}</p>
 </div>
 
-{{model.currently.time}}
-{{sky-icon height="100" width="100" icon=model.currently.icon color="blue"}}
 
-{{model.currently.temperature}}
+
 

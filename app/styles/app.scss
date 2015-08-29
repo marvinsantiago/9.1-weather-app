@@ -2,12 +2,29 @@
 @import "neat";
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 
+$main-clr: #edeaea;
+$main-font: 'Oswald', sans-serif;
+
 body {
-    background: #edeaea;
-    text-align: center;
-    font-family: 'Oswald', sans-serif;
+    @include outer-container(600px);
+
+    background: $main-clr;
+    font-family: $main-font;
+
 }
-nav {
-    display: inline-block;
-    background: #edeaea;
+
+.currentlocation {
+    background: black;
+    color: $main-clr;
+    margin-left: 20px;
+    padding: 5px 0;
+    text-align: center;
+
+}
+
+.currentweather {
+    text-align: center;
+}
+button {
+
 }
